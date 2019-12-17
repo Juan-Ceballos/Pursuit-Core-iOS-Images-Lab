@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab26_Images" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tzq-Dg-qy9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="269"/>
+                            </imageView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="x5n-JR-7av">
+                                <rect key="frame" x="160" y="432" width="94" height="32"/>
+                                <connections>
+                                    <action selector="comicStepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ejt-gd-fSW"/>
+                                </connections>
+                            </stepper>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r8V-5m-zeC">
+                                <rect key="frame" x="160" y="564" width="94" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="mGW-oB-E9j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAP-Vs-ZDd">
+                                <rect key="frame" x="20" y="335" width="87" height="30"/>
+                                <state key="normal" title="Most Recent"/>
+                                <connections>
+                                    <action selector="comicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8i1-Yu-voq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIE-P4-z7V">
+                                <rect key="frame" x="337" y="335" width="57" height="30"/>
+                                <state key="normal" title="Random"/>
+                                <connections>
+                                    <action selector="comicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wOz-kK-43X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZAP-Vs-ZDd" firstAttribute="top" secondItem="Tzq-Dg-qy9" secondAttribute="bottom" constant="22" id="3rC-MS-kZJ"/>
+                            <constraint firstItem="Tzq-Dg-qy9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AbZ-al-DV6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JIE-P4-z7V" secondAttribute="trailing" constant="20" id="EjL-M4-f5L"/>
+                            <constraint firstItem="x5n-JR-7av" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EpD-fs-Clo"/>
+                            <constraint firstItem="r8V-5m-zeC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KDb-vv-uW6"/>
+                            <constraint firstItem="Tzq-Dg-qy9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="LTl-ek-Nnn"/>
+                            <constraint firstItem="JIE-P4-z7V" firstAttribute="top" secondItem="Tzq-Dg-qy9" secondAttribute="bottom" constant="22" id="NZU-Yj-c9g"/>
+                            <constraint firstItem="r8V-5m-zeC" firstAttribute="top" secondItem="x5n-JR-7av" secondAttribute="bottom" constant="100" id="Nvs-Wt-oBl"/>
+                            <constraint firstItem="x5n-JR-7av" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SHL-nO-EUY"/>
+                            <constraint firstItem="JIE-P4-z7V" firstAttribute="leading" secondItem="ZAP-Vs-ZDd" secondAttribute="trailing" constant="230" id="YTg-Vm-0I7"/>
+                            <constraint firstItem="Tzq-Dg-qy9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cmb-FN-DDN"/>
+                            <constraint firstItem="ZAP-Vs-ZDd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gbG-xG-fqu"/>
+                            <constraint firstItem="Tzq-Dg-qy9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ok4-Rm-DiZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="comicImage" destination="Tzq-Dg-qy9" id="BYc-7j-55Q"/>
+                        <outlet property="comicStepper" destination="x5n-JR-7av" id="luO-Fl-CtK"/>
+                        <outlet property="comicTextField" destination="r8V-5m-zeC" id="8uO-yC-eeq"/>
+                        <outlet property="randomButton" destination="JIE-P4-z7V" id="CoQ-7E-e7R"/>
+                        <outlet property="recentButton" destination="ZAP-Vs-ZDd" id="niQ-Y5-KtW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584" y="104"/>
+        </scene>
+    </scenes>
+</document>
